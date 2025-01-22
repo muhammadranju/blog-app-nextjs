@@ -9,9 +9,15 @@ const Profile = async () => {
   console.log(user);
 
   if (!isAuth) {
-    redirect("/api/auth/login");
+    return redirect(
+      "https://mdranju.kinde.com/auth/cx/_:nav&m:login&psid:01948fad60ac09293ee307b31091dcec"
+    );
   }
-
+  if (!user) {
+    return redirect(
+      "https://mdranju.kinde.com/auth/cx/_:nav&m:login&psid:01948fad60ac09293ee307b31091dcec"
+    );
+  }
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-8 pb-20  sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <title>Profile | Blogs</title>
