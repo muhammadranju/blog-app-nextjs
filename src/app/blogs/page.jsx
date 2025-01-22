@@ -6,7 +6,7 @@ const Blogs = async () => {
   const posts = await res.json();
 
   return (
-    <div className="container mx-auto pt-10 px-4 sm:px-6 lg:px-8">
+    <div className="container mx-auto py-10 px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col items-center mb-10 justify-center">
         <h1 className="text-2xl font-bold">Latest all blogs</h1>
         <p>You can find all the latest blogs here.</p>
@@ -15,7 +15,7 @@ const Blogs = async () => {
         {posts.map((post) => (
           <div
             key={post.id}
-            className="flex border p-5 rounded-lg hover:shadow transition-shadow ease-in-out duration-300  capitalize space-y-3 flex-col items-center justify-center"
+            className="flex border p-5 rounded-lg hover:shadow-md transition-shadow ease-in-out duration-300  capitalize space-y-3 flex-col items-center justify-center"
           >
             <Link href={`/blogs/${post.id}`}>
               <h1 className="text-xl font-bold">
