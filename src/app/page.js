@@ -10,6 +10,7 @@ export default async function Home() {
     <>
       <Banner />
       <div className="container mx-auto px-4 py-10 sm:px-6  lg:px-8">
+        <title>Home | Blogs</title>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-6 4xl:grid-cols-7 5xl:grid-cols-8 6xl:grid-cols-9 auto-rows-fr">
           {posts.slice(0, 8).map((post) => (
             <div

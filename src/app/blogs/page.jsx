@@ -7,6 +7,7 @@ const Blogs = async () => {
 
   return (
     <div className="container mx-auto py-10 px-4 sm:px-6 lg:px-8">
+      <title>Latest Blogs | Blogs</title>
       <div className="flex flex-col items-center mb-10 justify-center">
         <h1 className="text-2xl font-bold">Latest all blogs</h1>
         <p>You can find all the latest blogs here.</p>
