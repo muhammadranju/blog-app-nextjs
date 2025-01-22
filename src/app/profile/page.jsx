@@ -21,9 +21,9 @@ const Profile = async () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-8 pb-20  sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <title>Profile | Blogs</title>
-      <div className="border p-10 px-28 py-20 rounded-xl shadow-lg">
-        <h1 className="text-7xl font-bold text-center">Hey👋</h1>
-        <p className="text-3xl font-bold text-center">
+      <div className="border p-10 lg:px-28  py-20 rounded-xl shadow-lg">
+        <h1 className="lg:text-7xl text-5xl font-bold text-center">Hey👋</h1>
+        <p className="lg:text-3xl text-xl font-bold text-center">
           Welcome to your profile!
         </p>
         <div className="flex flex-col mt-10 gap-y-1 items-center justify-center">
@@ -34,10 +34,12 @@ const Profile = async () => {
             className="w-16 h-16 rounded-xl"
             alt="user-image"
           />
-          <span className="text-xl font-bold">
+          <span className="lg:text-xl  font-bold">
             Name: {user.given_name} {user.family_name}
           </span>
-          <span className="text-xl font-semibold">Email: {user.email}</span>
+          <span className="lg:text-xl   font-semibold">
+            Email: {user.email}
+          </span>
         </div>
       </div>
     </div>

@@ -6,7 +6,7 @@ const BlogDetail = async ({ params }) => {
   );
   const post = await res.json();
   return (
-    <div className="container mx-auto capitalize px-4 py-16 sm:px-6 lg:py-24 lg:px-8">
+    <div className="container mx-auto capitalize px-4 py-16 sm:px-6 lg:py-24 lg:px-8 font-[family-name:var(--font-geist-sans)]">
       <title>Blogs Details | Blogs</title>
       <div className="flex flex-col items-center space-y-5 justify-center shadow-md rounded-lg p-20">
         <h1 className="text-3xl  max-w-5xl text-center font-bold">

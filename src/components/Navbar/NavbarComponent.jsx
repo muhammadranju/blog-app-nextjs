@@ -4,7 +4,7 @@ import NavLinks from "./NavLinks";
 
 export const NavbarComponent = ({ user, isAuthenticated }) => {
   return (
-    <div className="sticky top-0 bg-white/50 backdrop-blur-md">
+    <div className="sticky top-0 bg-white/50 backdrop-blur-md font-[family-name:var(--font-geist-sans)]">
       <div className="px-4 py-5 mx-auto lg:w-11/12 w-11/12 xl:container md:px-24 lg:px-8 ">
         <div className="relative flex items-center justify-between">
           <Link

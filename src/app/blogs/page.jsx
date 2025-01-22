@@ -6,7 +6,7 @@ const Blogs = async () => {
   const posts = await res.json();
 
   return (
-    <div className="container mx-auto py-10 px-4 sm:px-6 lg:px-8">
+    <div className="container mx-auto py-10 px-4 sm:px-6 lg:px-8 font-[family-name:var(--font-geist-sans)]">
       <title>Latest Blogs | Blogs</title>
       <div className="flex flex-col items-center mb-10 justify-center">
         <h1 className="text-2xl font-bold">Latest all blogs</h1>

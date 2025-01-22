@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Banner = () => {
   return (
-    <section className="bg-slate-950 text-white">
+    <section className="bg-slate-950 text-white font-[family-name:var(--font-geist-sans)]">
       <div className="mx-auto  px-4 py-20 lg:flex lg:items-center">
         <div className="mx-auto text-center">
           <h1 className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl">
