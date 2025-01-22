@@ -6,10 +6,10 @@ const Blogs = async () => {
   const posts = await res.json();
 
   return (
-    <div className="container mx-auto px-4 py-16 sm:px-6 lg:py-24 lg:px-8">
+    <div className="container mx-auto pt-10 px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col items-center mb-10 justify-center">
-        <h1 className="text-2xl font-bold">All Blogs</h1>
-        <p>You can find all the blogs here.</p>
+        <h1 className="text-2xl font-bold">Latest all blogs</h1>
+        <p>You can find all the latest blogs here.</p>
       </div>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-6 4xl:grid-cols-7 5xl:grid-cols-8 6xl:grid-cols-9 auto-rows-fr">
         {posts.map((post) => (
