@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import NavLinks from "./NavLinks";
 
-const NavbarMobile = () => {
+const NavbarMobile = ({ user, isAuthenticated }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className="lg:hidden">
@@ -62,7 +62,7 @@ const NavbarMobile = () => {
             </div>
             <nav>
               <ul className="space-y-4">
-                <NavLinks />
+                <NavLinks user={user} isAuthenticated={isAuthenticated} />
               </ul>
             </nav>
           </div>
