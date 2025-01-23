@@ -4,20 +4,14 @@ import { redirect } from "next/navigation";
 
 const Profile = async () => {
   const { getUser, isAuthenticated } = getKindeServerSession();
-  const user = await getUser();
-  const isAuth = await isAuthenticated();
-  console.log(user);
 
-  if (!isAuth) {
-    return redirect(
-      "https://mdranju.kinde.com/auth/cx/_:nav&m:login&psid:01948fad60ac09293ee307b31091dcec"
-    );
+  const user = await getUser();
+  const isLoggedIn = await isAuthenticated();
+
+  if (!isLoggedIn) {
+    return redirect("/api/auth/login");
   }
-  if (!user) {
-    return redirect(
-      "https://mdranju.kinde.com/auth/cx/_:nav&m:login&psid:01948fad60ac09293ee307b31091dcec"
-    );
-  }
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-8 pb-20  sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <title>Profile | Blogs</title>

@@ -2,8 +2,15 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
 import Image from "next/image";
+import {
+  LoginLink,
+  LogoutLink,
+  RegisterLink,
+  useKindeBrowserClient,
+} from "@kinde-oss/kinde-auth-nextjs";
 
-const NavLinks = ({ user, isAuthenticated }) => {
+const NavLinks = () => {
+  const { user, isAuthenticated } = useKindeBrowserClient();
   console.log(user);
   return (
     <>
@@ -53,22 +60,22 @@ const NavLinks = ({ user, isAuthenticated }) => {
           </li>
 
           <li>
-            <Link href={"/api/auth/logout"}>
+            <LogoutLink>
               <Button variant="destructive">Sign out</Button>
-            </Link>
+            </LogoutLink>
           </li>
         </>
       ) : (
         <>
           <li>
-            <Link href={"/api/auth/login"}>
+            <LoginLink>
               <Button variant={"outline"}>Sign In</Button>
-            </Link>
+            </LoginLink>
           </li>
           <li>
-            <Link href={"/api/auth/register"}>
+            <RegisterLink>
               <Button>Sign Up</Button>
-            </Link>
+            </RegisterLink>
           </li>
         </>
       )}
